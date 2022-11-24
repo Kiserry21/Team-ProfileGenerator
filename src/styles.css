@@ -1,0 +1,27 @@
+header {
+    background-color: tomato;
+    padding: 1rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+
+main {
+    margin: 2rem;
+}
+
+.card {
+    box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 50%);
+}
+
+.card-body {
+    background-color: rgb(235, 43, 200);
+    color: rgb(255, 255, 255);
+}
