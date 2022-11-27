@@ -1,9 +1,9 @@
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
-const inquirer = require("inquirer");
-const path = require("path");
-const fs = require("fs");
+import Manager from "./lib/Manager.js";
+import Engineer from "./lib/Engineer.";
+import Intern from "./lib/Intern.js";
+import inquirer from 'inquirer';
+import path from "path";
+import fs from "fs";
 
 const DIST_DIR = path.resolve(__dirname, "dist");
 const distPath = path.join(DIST_DIR, "team.html");
