@@ -1,12 +1,21 @@
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
-const Manager = require("./lib/Manager.js");
-const Engineer = require("./lib/Engineer.js");
-const Intern = require("./lib/Intern.js");
-const generatePage = require("./src/page-template");
-const { writeFile, copyFile } = require("./utils/generate-site");
+const path = require("path");
+const fs = require("fs");
+
+const DIST_DIR = path.resolve(__dirname, "dist");
+const distPath = path.join(DIST_DIR, "team.html");
+
+const render = require("./src/page-template.js");
+
+const teamMembers = [];
+const idArray = [];
 
 
 
+// Inform user of usage
 function appMenu() {
     function createManager() {
       console.log("Please build your team 👥");
@@ -232,4 +241,17 @@ function appMenu() {
             createTeam();
           });
       }
+      
+
+function buildTeam() {
+    // Create the output directory if the dist path doesn't exist
+    if (!fs.existsSync(DIST_DIR)) {
+      fs.mkdirSync(DIST_DIR);
+    }
+    fs.writeFileSync(distPath, render(teamMembers), "utf-8");
+  }
+
+  createManager();
 }
+
+appMenu();
