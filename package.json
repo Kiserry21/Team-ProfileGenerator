@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -22,6 +21,6 @@
   },
   "homepage": "https://github.com/Kiserry21/Team-ProfileGenerator#readme",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^6.3.1"
   }
 }
